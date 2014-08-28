@@ -59,7 +59,7 @@ module.exports = {
 			if (entry !== null && index !== null) {
 				var downsizeOutput = downsize(entry, downsizeOptions),
 					downzeroOutput = downzero(entry);
-
+					
 				if (downsizeOutput !== downzeroOutput) {
 					console.error('CASE ' + index + ' OUTPUT NOT IDENTICAL');
 				} else if (showErrorOnly !== true) {
