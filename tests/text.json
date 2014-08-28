@@ -1,0 +1,6 @@
+[
+	"<p></p>",
+	"<a>This is a link</a>",
+	"<a href=\"http://www.internet.com\">This is a link</a>",
+	"<p><a href=\"http://www.internet.com\">This is a link</a></p>"
+]

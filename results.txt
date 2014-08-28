@@ -1,0 +1,120 @@
+
+textTests 
+------------------------------------------------
+Case 0
+Input:  <p></p>
+Output: <p></p>
+Case 1
+Input:  <a>This is a link</a>
+Output: <a></a>
+Case 2
+Input:  <a href="http://www.internet.com">This is a link</a>
+Output: <a href="http://www.internet.com"></a>
+Case 3
+Input:  <p><a href="http://www.internet.com">This is a link</a></p>
+Output: <p><a href="http://www.internet.com"></a></p>
+
+imgTests 
+------------------------------------------------
+Case 0
+Input:  <img src="example.png" >
+Output: <img src="example.png" >
+Case 1
+Input:  <p><img src="example.png"></p>
+Output: <p><img src="example.png"></p>
+Case 2
+Input:  <p><img src="example.png"></p>
+Output: <p><img src="example.png"></p>
+Case 3
+Input:  <p><img src="example.png" alt="Alternative"></p>
+Output: <p><img src="example.png" alt="Alternative"></p>
+Case 4
+Input:  <p><img src="example.png" alt="Alternative"></p>
+Output: <p><img src="example.png" alt="Alternative"></p>
+Case 5
+Input:  <p><img src="example.png" alt="Alternative" title="Title"></p>
+Output: <p><img src="example.png" alt="Alternative" title="Title"></p>
+Case 6
+Input:  <p><img src="example.png" alt="Alternative" title="Title"></p>
+Output: <p><img src="example.png" alt="Alternative" title="Title"></p>
+Case 7
+Input:  <p><img src="example.png" alt="Alternative" title="Title"></p>
+Output: <p><img src="example.png" alt="Alternative" title="Title"></p>
+Case 8
+Input:  <p><a href="http://www.internet.com"><img src="example.png"></a></p>
+Output: <p><a href="http://www.internet.com"><img src="example.png"></a></p>
+Case 9
+Input:  <p><a href="http://www.internet.com"><img src="example.png" alt="Alternative"></a></p>
+Output: <p><a href="http://www.internet.com"><img src="example.png" alt="Alternative"></a></p>
+Case 10
+Input:  <p><a href="http://www.internet.com"><img src="example.png" alt="Alternative" title="Title"></a></p>
+Output: <p><a href="http://www.internet.com"><img src="example.png" alt="Alternative" title="Title"></a></p>
+Case 11
+Input:  <p><a><a><a><img src="example.png"></a></a></a></p>
+Output: <p><a><a><a><img src="example.png"></a></a></a></p>
+Case 12
+Input:  <p><a>Bli<a><a><img src="example.png"></a></a>Blob</a></p>
+Output: <p><a></a></p>
+Case 13
+Input:  <p><img src="examp>><><>le.png"></p>
+Output: <p><img src="examp>><><>le.png"></p>
+Case 14
+Input:  <p><img src="example.png" /></p>
+Output: <p><img src="example.png" /></p>
+Case 15
+Input:  <p><img src="example.png" >></p>
+Output: <p><img src="example.png" ></p>
+Case 16
+Input:  <p><img NONTAG src="example.png"></p>
+Output: <p><img NONTAG src="example.png"></p>
+Case 17
+Input:  <p><img data-TAG="para" src="example.png"></p>
+Output: <p><img data-TAG="para" src="example.png"></p>
+Case 18
+Input:  <p><img src="example.png"><img src="example.png"><img src="example.png"></p>
+Output: <p><img src="example.png"><img src="example.png"><img src="example.png"></p>
+Case 19
+Input:  <p><img src="example.png"><img src="example.png">Hi<img src="example.png"></p>
+Output: <p><img src="example.png"><img src="example.png"></p>
+Case 20
+Input:  <p><img src="example.png">Hi<img src="example.png">
+Output: <p><img src="example.png"></p>
+
+videoTests 
+------------------------------------------------
+Case 0
+Input:  <p></p>
+Output: <p></p>
+Case 1
+Input:  <p><video></p>
+Output: <p><video></p></video></p>
+Case 2
+Input:  <p><video></video></p>
+Output: <p><video></video></p>
+Case 3
+Input:  <p><video><source src="movie.mp4"></video></p>
+Output: <p><video><source src="movie.mp4"></video></p>
+Case 4
+Input:  <p><video><source src="movie.mp4"><source src="movie.ogg"></video></p>
+Output: <p><video><source src="movie.mp4"><source src="movie.ogg"></video></p>
+Case 5
+Input:  <p><video width="320"><source src="movie.mp4"><source src="movie.ogg"></video></p>
+Output: <p><video width="320"><source src="movie.mp4"><source src="movie.ogg"></video></p>
+Case 6
+Input:  <p><video width="320" height="240"><source src="movie.mp4"><source src="movie.ogg"></video></p>
+Output: <p><video width="320" height="240"><source src="movie.mp4"><source src="movie.ogg"></video></p>
+Case 7
+Input:  <p><video width="320" height="240" controls><source src="movie.mp4"><source src="movie.ogg"></video></p>
+Output: <p><video width="320" height="240" controls><source src="movie.mp4"><source src="movie.ogg"></video></p>
+Case 8
+Input:  <p><video width="320" height="240" controls><source src="movie.mp4" type="video/mp4"><source src="movie.ogg"></video></p>
+Output: <p><video width="320" height="240" controls><source src="movie.mp4" type="video/mp4"><source src="movie.ogg"></video></p>
+Case 9
+Input:  <p><video width="320" height="240" controls><source src="movie.mp4" type="video/mp4"><source src="movie.ogg" type="video/ogg"></video></p>
+Output: <p><video width="320" height="240" controls><source src="movie.mp4" type="video/mp4"><source src="movie.ogg" type="video/ogg"></video></p>
+Case 10
+Input:  <p><video width="320" height="240" controls><source src="movie.mp4" type="video/mp4"><source src="movie.ogg" type="video/ogg">Your browser does not support the video tag.</video></p>
+Output: <p><video width="320" height="240" controls><source src="movie.mp4" type="video/mp4"><source src="movie.ogg" type="video/ogg"></video></p>
+Case 11
+Input:  <p><video width="320" height="240" controls><source src="movie.mp4" type="video/mp4">Blibablub<source src="movie.ogg" type="video/ogg"></video></p>
+Output: <p><video width="320" height="240" controls><source src="movie.mp4" type="video/mp4"></video></p>

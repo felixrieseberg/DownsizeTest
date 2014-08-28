@@ -1,0 +1,23 @@
+[
+	"<img src=\"example.png\" >",
+	"<p><img src=\"example.png\"></p>",
+	"<p><img src=\"example.png\"></p>",
+	"<p><img src=\"example.png\" alt=\"Alternative\"></p>",
+	"<p><img src=\"example.png\" alt=\"Alternative\"></p>",
+	"<p><img src=\"example.png\" alt=\"Alternative\" title=\"Title\"></p>",
+	"<p><img src=\"example.png\" alt=\"Alternative\" title=\"Title\"></p>",
+	"<p><img src=\"example.png\" alt=\"Alternative\" title=\"Title\"></p>",
+	"<p><a href=\"http://www.internet.com\"><img src=\"example.png\"></a></p>",
+	"<p><a href=\"http://www.internet.com\"><img src=\"example.png\" alt=\"Alternative\"></a></p>",
+	"<p><a href=\"http://www.internet.com\"><img src=\"example.png\" alt=\"Alternative\" title=\"Title\"></a></p>",
+	"<p><a><a><a><img src=\"example.png\"></a></a></a></p>",
+	"<p><a>Bli<a><a><img src=\"example.png\"></a></a>Blob</a></p>",
+	"<p><img src=\"examp>><><>le.png\"></p>",
+	"<p><img src=\"example.png\" /></p>",
+	"<p><img src=\"example.png\" >></p>",
+	"<p><img NONTAG src=\"example.png\"></p>",
+	"<p><img data-TAG=\"para\" src=\"example.png\"></p>",
+	"<p><img src=\"example.png\"><img src=\"example.png\"><img src=\"example.png\"></p>",
+	"<p><img src=\"example.png\"><img src=\"example.png\">Hi<img src=\"example.png\"></p>",
+	"<p><img src=\"example.png\">Hi<img src=\"example.png\">"
+]
