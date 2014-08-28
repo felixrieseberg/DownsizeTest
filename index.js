@@ -4,7 +4,7 @@ var prompt = require('prompt'),
 
 	testOptions = [{
 		name: 'testType',
-		description: 'Which tests do you want to run? (\'img\', \'video\', \'text\' or \'all\')',
+		description: 'Which tests do you want to run? (\'img\', \'video\', \'text\', \'all\' or custom input)',
 		default: 'all'
 	},
 	{
@@ -40,9 +40,7 @@ prompt.get(testOptions, function (error, result) {
 				test.runTest('text');
 				break;
 			default:
-				test.runTest('text');
-				test.runTest('img');
-				test.runTest('video');
+				test.runTest(result.testType);
 				break;
 		}
 		console.info('\nAll done!\n');
