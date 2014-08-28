@@ -10,14 +10,15 @@ var fs = require('fs'),
 
 function output(index, input, output, outputDZ, title) {
 	if (writeToFilesystem) {
-		if (!testRunning) {
+		if (!testRunning && fs.existsSync('results.txt') ) {
 			console.warn('results.txt already exists, overwriting');
 			fs.unlinkSync('results.txt');
 		}
 		if (title) {
 			dataToAppend = title;
 		} else {
-			dataToAppend = 'Case ' + index + '\n' + 'Input:  ' + input + '\n' + 'Output: ' + output + '\n' + 'Downzero: ' + outputDZ;
+			dataToAppend = '\n --- Case ' + index + ' ---\n' + 'Input:  ' + input + '\n' 
+				+ 'Output: ' + output + '\n' + 'Downzero: ' + outputDZ;
 		}
 		fs.appendFileSync("results.txt", dataToAppend);
 	} else {
@@ -34,7 +35,7 @@ function output(index, input, output, outputDZ, title) {
 }
 
 function outputTitle(title) {
-	output(null, null, null, null, '\n' + title + 'Tests \n' + '------------------------------------------------' + '\n');
+	output(null, null, null, null, '\n\n ' + title + ' Tests \n' + '------------------------------------------------' + '\n');
 }
 
 module.exports = {
@@ -59,7 +60,7 @@ module.exports = {
 			if (entry !== null && index !== null) {
 				var downsizeOutput = downsize(entry, downsizeOptions),
 					downzeroOutput = downzero(entry);
-					
+
 				if (downsizeOutput !== downzeroOutput) {
 					console.error('CASE ' + index + ' OUTPUT NOT IDENTICAL');
 				} else if (showErrorOnly !== true) {
