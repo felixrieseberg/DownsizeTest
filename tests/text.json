@@ -1,6 +1,12 @@
 [
 	"<p></p>",
+	"<p><a></a></p>",
+	"<p><a class=\"myclass\"></a></p>",
+	"<p><a id=\"myid\"></a></p>",
 	"<a>This is a link</a>",
 	"<a href=\"http://www.internet.com\">This is a link</a>",
-	"<p><a href=\"http://www.internet.com\">This is a link</a></p>"
+	"<p><a href=\"http://www.internet.com\">This is a link</a></p>",
+	"<p><a></a></p><p><a></a></p><p><a></a></p>",
+	"<p><a></a></p><p><a>Hi</a></p><p><a></a></p>",
+	"<p><a></a></p><p><a>Hi</a></p><p><a>Hi</a></p>"
 ]

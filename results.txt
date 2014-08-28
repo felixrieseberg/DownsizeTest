@@ -5,14 +5,32 @@ Case 0
 Input:  <p></p>
 Output: <p></p>
 Case 1
+Input:  <p><a></a></p>
+Output: <p><a></a></p>
+Case 2
+Input:  <p><a class="myclass"></a></p>
+Output: <p><a class="myclass"></a></p>
+Case 3
+Input:  <p><a id="myid"></a></p>
+Output: <p><a id="myid"></a></p>
+Case 4
 Input:  <a>This is a link</a>
 Output: <a></a>
-Case 2
+Case 5
 Input:  <a href="http://www.internet.com">This is a link</a>
 Output: <a href="http://www.internet.com"></a>
-Case 3
+Case 6
 Input:  <p><a href="http://www.internet.com">This is a link</a></p>
 Output: <p><a href="http://www.internet.com"></a></p>
+Case 7
+Input:  <p><a></a></p><p><a></a></p><p><a></a></p>
+Output: <p><a></a></p><p><a></a></p><p><a></a></p>
+Case 8
+Input:  <p><a></a></p><p><a>Hi</a></p><p><a></a></p>
+Output: <p><a></a></p><p><a></a></p>
+Case 9
+Input:  <p><a></a></p><p><a>Hi</a></p><p><a>Hi</a></p>
+Output: <p><a></a></p><p><a></a></p>
 
 imgTests 
 ------------------------------------------------
