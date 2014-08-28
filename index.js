@@ -13,6 +13,13 @@ var prompt = require('prompt'),
 		validator: /y[es]*|n[o]?/,
   		warning: 'Must respond yes or no',
   		default: 'no'
+	},
+	{
+		name: 'errorOnly',
+		description: 'Do you want to only display errors?',
+		validator: /y[es]*|n[o]?/,
+  		warning: 'Must respond yes or no',
+  		default: 'no'
 	}];
 
 prompt.start();
@@ -23,6 +30,9 @@ prompt.get(testOptions, function (error, result) {
 	if (!error) {
 		if (result.writeToFilesystem === 'yes') {
 			test.outputFile(true);
+		}
+		if (result.errorOnly === 'yes') {
+			test.errorOnly(true);
 		}
 		switch (result.testType) {
 			case 'all':

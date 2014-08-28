@@ -1,6 +1,5 @@
 [
 	"<p></p>",
-	"<p><video></p>",
 	"<p><video></video></p>",
 	"<p><video><source src=\"movie.mp4\"></video></p>",
 	"<p><video><source src=\"movie.mp4\"><source src=\"movie.ogg\"></video></p>",
